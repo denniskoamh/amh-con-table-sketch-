@@ -1,0 +1,16 @@
+<h1>amh-con-tag</h1>
+
+<button (click)="switchView()">Switch View</button>
+
+<div class="opportunity-profile-page">
+  <app-amh-con-tab-group>
+    <app-amh-con-tab *ngIf="!separateFirstTab" label="label-1"
+      ><ng-container *ngTemplateOutlet="leftContent"></ng-container
+    ></app-amh-con-tab>
+    <app-amh-con-tab label="label-2"> Tab Content 2 </app-amh-con-tab>
+    <app-amh-con-tab label="label-3"> Tab Content 3 </app-amh-con-tab>
+    <app-amh-con-tab label="label-4"> Tab Content 4 </app-amh-con-tab>
+  </app-amh-con-tab-group>
+</div>
+
+<ng-template #leftContent> Tab Content 1 </ng-template>
